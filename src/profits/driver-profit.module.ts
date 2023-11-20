@@ -6,7 +6,11 @@ import { GetSumProfitsController } from './use-cases/get-sum-profits/get-sum-pro
 
 @Module({
   imports: [],
-  controllers: [SaveProfitsController, GetProfitsController, GetSumProfitsController],
+  controllers: [
+    SaveProfitsController,
+    GetProfitsController,
+    GetSumProfitsController,
+  ],
   providers: [ProfitsRepository],
 })
 
