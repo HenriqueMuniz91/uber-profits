@@ -8,8 +8,8 @@ export class GetProfitsController {
   
   @Get('get')
   getProfits() {
-    const profits = this.profitsRepository.get()
-    console.log(profits)
-    return profits
-  }
-}
+    const profits = this.profitsRepository.get();
+    console.log(profits);
+    return profits;
+  };
+};
