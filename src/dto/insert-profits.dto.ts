@@ -1,7 +1,7 @@
-import { IsNotEmpty, IsNumber, IsString } from "class-validator";
+import { IsNotEmpty, IsNumber, } from "class-validator";
 
 export class InsertProfitsDTO {
-  @IsString()
+  @IsNumber()
   @IsNotEmpty()
   Value: number;
   };
