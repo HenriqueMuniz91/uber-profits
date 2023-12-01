@@ -8,10 +8,8 @@ export class SaveProfitsController {
   constructor (private profitsRepository: ProfitsRepository) {};
   
   @Post('save')
-  insertProfit(@Body() profitValue: InsertProfitsDTO){
-    console.log(profitValue);
+  insertProfit(@Body() profitValue: InsertProfitsDTO) {
     this.profitsRepository.salvar(profitValue.Value);
-    console.log(profitValue.Value);
     return profitValue.Value;
   };
 };
