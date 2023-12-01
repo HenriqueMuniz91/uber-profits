@@ -7,7 +7,7 @@ export class GetProfitsController {
   constructor (private profitsRepository: ProfitsRepository) {};
   
   @Get('get')
-  getProfits() {
+  getProfits(): number[] {
     const profits = this.profitsRepository.get();
     console.log(profits);
     return profits;
