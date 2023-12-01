@@ -7,7 +7,7 @@ export class GetSumProfitsController {
   constructor(private profitsRepository: ProfitsRepository) {};
 
   @Get('sum')
-  getSumProfits() {
+  getSumProfits(): number {
     const profits = this.profitsRepository.get();
     const sum = profits.reduce((accumulator,value) => accumulator + value, 0);
     return sum;
