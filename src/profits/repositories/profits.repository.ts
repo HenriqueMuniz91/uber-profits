@@ -1,10 +1,9 @@
 export class ProfitsRepository {
   private profits = [];
-  salvar(profit) {
+  salvar(profit: number): void {
     this.profits.push(profit);
-    console.log("salvar:" + this.profits);
   };
-  get() {
+  get(): number[] {
     return this.profits;
   };
 };
