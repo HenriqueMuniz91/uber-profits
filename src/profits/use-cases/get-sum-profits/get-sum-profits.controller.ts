@@ -9,7 +9,7 @@ export class GetSumProfitsController {
   @Get('sum')
   getSumProfits(): number {
     const profits = this.profitsRepository.get();
-    const sum = profits.reduce((accumulator,value) => accumulator + value, 0);
+    const sum = profits.reduce((accumulator,profit) => accumulator + profit.profit, 0);
     return sum;
   };
 };
