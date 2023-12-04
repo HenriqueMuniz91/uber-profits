@@ -9,7 +9,7 @@ export class SaveProfitsController {
   
   @Post('save')
   insertProfit(@Body() profitValue: InsertProfitsDTO) {
-    this.profitsRepository.salvar(profitValue.Value);
-    return profitValue.Value;
+    this.profitsRepository.salvar(profitValue.value, profitValue.date);
+    return "deu certo";
   };
 };
