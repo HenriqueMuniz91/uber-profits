@@ -1,9 +1,14 @@
+import { GetProfitsResponse } from "../use-cases/get-profits/get-profits.controller";
+
 export class ProfitsRepository {
   private profits = [];
-  salvar(profit: number): void {
-    this.profits.push(profit);
+  salvar(profit: number, date: Date): void {
+    this.profits.push({
+      profit, 
+      date,
+    });
   };
-  get(): number[] {
+  get(): GetProfitsResponse[] {
     return this.profits;
   };
 };
