@@ -1,14 +1,12 @@
-import { GetProfitsResponse } from "../use-cases/get-profits/get-profits.controller";
+import { Profit } from "../domain/entities/profit.entity";
+import { GetProfitsResponse } from "../use-cases/get-profits/get-profits.dto";
 
 export class ProfitsRepository {
-  private profits = [];
-  salvar(profit: number, date: Date): void {
-    this.profits.push({
-      profit, 
-      date,
-    });
+  private profits: Profit[] = [];
+  salvar(profit: Profit): void {
+    this.profits.push(profit);
   };
-  get(): GetProfitsResponse[] {
+  get(): Profit[] {
     return this.profits;
   };
 };
