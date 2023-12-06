@@ -9,7 +9,10 @@ export class SaveProfitsController {
   constructor (private profitsRepository: ProfitsRepository) {};
   
   @Post('save')
-  insertProfit(@Body() profitValue: SaveProfitsDTO) {
+  insertProfit(
+    @Body() 
+    profitValue: SaveProfitsDTO
+  ) {
     const profit = new Profit(profitValue.value, profitValue.date, profitValue.name);
     this.profitsRepository.salvar(profit);
     return "deu certo";
