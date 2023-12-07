@@ -7,8 +7,14 @@ export class ProfitsRepository {
   };
   get(name?: string): Profit[] {
     if (name) {
-      return []
+      const profitsWithFilters = this.profits.filter((profit) => {
+        if (profit.name == name){
+          return true
+        } 
+      })
+      return profitsWithFilters
     }
+    
     return this.profits;
   };
 };
