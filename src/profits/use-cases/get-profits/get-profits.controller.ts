@@ -10,7 +10,7 @@ export class GetProfitsController {
   @Get('get')
   getProfits(
     @Query('name') 
-    name: string
+    name: string,
   ): Profit[] {
     console.log (name)
     const profits = this.profitsRepository.get(name);
